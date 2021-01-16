@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App2.View.Ders5Pages">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="20" ></OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <Entry x:Name="ent_ent1"></Entry>
+            <Label FontSize="Large" Text="{Binding
+                Source={x:Reference ent_ent1},
+                Path=Text,
+                StringFormat='Name : {0}'}">
+            </Label>
+            <DatePicker Format="dd.MM.yyyy"/>
+
+
+            <Slider x:Name="sld_sld1" Maximum="10000" Minimum="1000"></Slider>
+            <Label FontSize="30" Text="{Binding
+                Source={x:Reference sld_sld1},
+                Path=Value,
+                StringFormat='Slider Value : {0} TL'}">
+            </Label>
+            <Label Text="Deneme Metni" FontSize="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
